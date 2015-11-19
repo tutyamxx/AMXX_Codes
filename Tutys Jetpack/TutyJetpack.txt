@@ -1,0 +1,62 @@
+[en]
+TJP_DISABLED = Hey! The plugin is disabled!
+TJP_BUYZONE = You must be in buyzone!
+TJP_ADMINONLY = The plugin is for admin only!
+TJP_ALIVE = You can't buy when you are dead!
+TJP_MONEY = You don't have enough money! You need %d$!
+TJP_HAVE = You already have a Jetpack!
+TJP_BOUGHT = You have bought a Jetpack! Hold 'JUMP' to use it!
+
+[ro]
+TJP_DISABLED = Hey! Pluginul este oprit!
+TJP_BUYZONE = Trebuie sa fi in baza!
+TJP_ADMINONLY = Pluginul este doar pentru admini!
+TJP_ALIVE = Nu poti cumpara cand esti mort!
+TJP_MONEY = Nu ai destui bani! Iti trebuie %d$!
+TJP_HAVE = Ai deja un Jetpack!
+TJP_BOUGHT = Ai cumparat un Jetpack! Tine apasat 'JUMP' pentru a il folosi!
+
+[de]
+TJP_DISABLED = Hey! Das Plugin ist Deaktiviert!
+TJP_BUYZONE = Du musst in der Kaufzone sein!
+TJP_ADMINONLY = Das Plugin ist nur fuer Admins!
+TJP_ALIVE = Du kannst es nicht kaufen wenn du tod bist!
+TJP_MONEY = Du hast nicht genuegend Geld, du benoetigest %d$!
+TJP_HAVE = Du besitzt schon einen Jetpack!
+TJP_BOUGHT = Du hast einen Jetpack gekauft Halte 'Springen' gedrueckt um es zu nutzten! 
+
+[ru]
+TJP_DISABLED = Ei! Plagin vykljuchen!
+TJP_BUYZONE = Ty dolzen byt' v zone pokupki!
+TJP_ADMINONLY = Plagin dostupen tolko dlja adminov!
+TJP_ALIVE = Ty ne mozesh kupit' kogda ti mertvyi!
+TJP_MONEY = U tebja nedostatochno deneg! Tebe nuzno %d$!
+TJP_HAVE = U tebja uze est' Jetpack!
+TJP_BOUGHT = Ty uzhe kupil Jetpack! Derzi 'JUMP' chtoby ispolzovat' ego! 
+
+[es]
+TJP_DISABLED = El plugin esta desactivado!
+TJP_BUYZONE = Tenes que estar en la zona de compra!
+TJP_ADMINONLY = El plugin es para admins nada mas!
+TJP_ALIVE = No podes comprar si estas muerto!
+TJP_MONEY = No tenes plata, Necesitas $%d!
+TJP_HAVE = Ya tenes un Jetpack!
+TJP_BOUGHT = Compraste un Jetpack, Apreta 'SALTAR' Para usarlo!
+
+[nl]
+TJP_DISABLED = Yo! De plugin is uitgeschakeld!
+TJP_BUYZONE = Je moet in de koopzone zijn!
+TJP_ADMINONLY = De plugin is alleen voor Admins!
+TJP_ALIVE = Je kan niks kopen als je dood bent!
+TJP_MONEY = Je hebt niet genoeg geld! Hebt $%d nodig!
+TJP_HAVE = Je hebt reeds een VliegPak!
+TJP_BOUGHT = Je kocht een VliegPak! Houd 'SPRING' in om het te gebruiken! 
+
+[sv]
+TJP_DISABLED = Halla! Pluginen 'a'r avaktiverad!
+TJP_BUYZONE = Du maste vara i en k'o'pzon!
+TJP_ADMINONLU = Pluginen 'a'r f'o'r admins bara!
+TJP_ALIVE = Du kan inte k'o'pa n'a'r du 'a'r d'o'd!
+TJP_MONEY = Du har inte tillr'a'ckligt med pengar! Du beh'o'ver %d$!
+TJP_HAVE = Du har redan en Jetpack!
+TJP_BOUGHT = Du har k'o'pt en Jetpack! Hall nere 'JUMP' f'o'r att anv'a'nda den!
