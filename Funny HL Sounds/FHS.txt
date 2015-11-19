@@ -1,0 +1,71 @@
+[en]
+FHS_ADVERTISE_1 = This server is using Funny HL Sounds!
+FHS_ADVERTISE_2 = Type '/fhshelp' to know how to use it.
+FHS_DISABLED = Funny HL Sounds are disabled!
+FHS_ADMIN_ONLY = Funny HL Sounds are only for admins!
+FHS_WAIT = You must wait %d seconds before you can use sounds again!
+FHS_TITLE = Funny HL Sounds
+FHS_MOTD_LN1 = Type in <u>console</u> <font color=^"red^">fhsmenu</font> to get the Funny HL Sounds menu
+FHS_MOTD_LN2 = Or you can bind a <u>key</u> to <font color=^"red^">fhsmenu</font>
+FHS_MOTD_LN3 = For example: <u>bind</u> <i><font color=^"red^">=</font></i> <u><font color=^"red^">fhsmenu</font></u>
+FHS_MOTD_LN4 = Type in <u>chat</u> <font color=^"red^">/fhshelp</font> to re-open this window
+
+[ro]
+FHS_ADVERTISE_1 = Acest server foloseste Funny HL Sounds!
+FHS_ADVERTISE_2 = Scrie '/fhshelp' pentru a sti cum sa le folosesti.
+FHS_DISABLED = Sunetele Funny HL Sounds sunt oprite!
+FHS_ADMIN_ONLY = Sunetele Funny HL Sounds sunt doar pentru admini!
+FHS_WAIT = Trebuie sa astepti %d secunde pentru a folosi din nou sunetele!
+FHS_TITLE = Funny HL Sounds
+FHS_MOTD_LN1 = Scrie in <u>consola</u> <font color=^"red^">fhsmenu</font> pentru a accesa meniul Funny HL Sounds
+FHS_MOTD_LN2 = Sau poti folosi un bind la o <u>tasta</u> pentru <font color=^"red^">fhsmenu</font>
+FHS_MOTD_LN3 = Iata un exemplu: <u>bind</u> <i><font color=^"red^">=</font></i> <u><font color=^"red^">fhsmenu</font></u>
+FHS_MOTD_LN4 = Scrie in <u>chat</u> <font color=^"red^">/fhshelp</font> ca sa redeschizi aceasta fereastra
+
+[es]
+FHS_ADVERTISE_1 = Este server esta usando Sonidos Divertidos de HL!
+FHS_ADVERTISE_2 = Escribe '/fhshelp' para saber como usarlo.
+FHS_DISABLED = Los Sonidos Divertidos de HL estan desactivados!
+FHS_ADMIN_ONLY = Los Sonidos Divertidos de HL son solo para Admins!
+FHS_WAIT = Tenes que esperar %d segundos para poder usar los sonidos devuelta!
+FHS_TITLE = Sonidos Divertidos de HL
+FHS_MOTD_LN1 = Escribe en la <u>consola</u> <font color=^"red^">fhsmenu</font> Para abrir el menu de Sonidos Divertidos de HL
+FHS_MOTD_LN2 = O puedes bindear una<u>tecla</u>para<font color=^"red^">fhsmenu</font>
+FHS_MOTD_LN3 = Por ejemplo: <u>bind</u> <i><font color=^"red^">=</font></i> <u><font color=^"red^">fhsmenu</font></u>
+FHS_MOTD_LN4 = Escribe en el <u>chat</u> <font color=^"red^">/fhshelp</font> para reabrir esta ventana. 
+
+[pl]
+FHS_ADVERTISE_1 = Ten serwer uzywa Smiesznych Dzwiekow z Half-Life!
+FHS_ADVERTISE_2 = Wpisz '/fhshelp' zeby wiedziec jak ich uzywac.
+FHS_DISABLED = Smieszne Dzwieki z Half-Life sa wylaczone!
+FHS_ADMIN_ONLY = Smieszne Dzwieki z Half-Life sa tylko dla adminow!
+FHS_WAIT = Musisz poczekac %d sekund za nim uzyjesz ponownie jakiegos dzwieku!
+FHS_TITLE = Smieszne Dzwieku z Half-Life
+FHS_MOTD_LN1 = Wpisz w <u>konsoli</u> <font color=^"red^">fhsmenu</font> zeby wlaczyc menu ze Smiesznymi Dzwiekami z Half-Life.
+FHS_MOTD_LN2 = Albo mozesz zrobic bind <u>klawisz</u> <font color=^"red^">fhsmenu</font>
+FHS_MOTD_LN3 = Na przyklad: <u>bind</u> <i><font color=^"red^">=</font></i> <u><font color=^"red^">fhsmenu</font></u>
+FHS_MOTD_LN4 = Napisz w <u>czacie</u> <font color=^"red^">/fhshelp</font> zeby ponownie wlaczyc to okienko
+
+[lt]
+FHS_ADVERTISE_1 = Sis serveris naudoja Juokingus HL Garsus!
+FHS_ADVERTISE_2 = Parasykite '/fhshelp', kad suzinotumete, kaip panaudoti tai.
+FHS_DISABLED = Juokingi HL Garsai yra isjungti!
+FHS_ADMIN_ONLY = Juokingi HL Garsai yra tiktai adminams!
+FHS_WAIT = Jus turite laukti %d sekundziu, kad vel galtumete panaudoti garsus!
+FHS_TITLE = Juokingi HL Garsai
+FHS_MOTD_LN1 = Rasykite <u>konsoleje</u> <font color=^"red^">fhsmenu</font> kad gautumete juokingu HL garsu meniu
+FHS_MOTD_LN2 = Galite uzsibindinti meniu rasydami konsoleje <u>bind</u> mygtukas <font color=^"red^">fhsmenu</font>
+FHS_MOTD_LN3 = Pavizdziui: <u>bind</u> <i><font color=^"red^">=</font></i> <u><font color=^"red^">fhsmenu</font></u>
+FHS_MOTD_LN4 = Rasykite <u>chate</u> <font color=^"red^">/fhshelp</font> kad vel atydaritumete si langa
+
+[sv]
+FHS_ADVERTISE_1 = Den h'a'r servern anv'a'nder Roliga HL Ljud!
+FHS_ADVERTISE_2 = Skriv '/fhshelp' f'o'r att veta hur man anv'a'nder det.
+FHS_DISABLED = Roliga HL Ljud 'a'r avaktiverad!
+FHS_ADMIN_ONLY = Roliga HL Ljud 'a'r bara f'o'r admins!
+FHS_WAIT = Du maste v'a'nta %d sekunder innan du kan anv'a'nda ljuden igen!
+FHS_TITLE = Roliga HL Ljud
+FHS_MOTD_LN1 = Skriv i <u>console</u> <font color=^"red^">fhsmenu</font> f'o'r att ta upp Roliga HL Ljud menyn
+FHS_MOTD_LN2 = Eller sa kan du binda en <u>knapp</u> till <font color=^"red^">fhsmenu</font>
+FHS_MOTD_LN3 = Till exempel: <u>bind</u> <i><font color=^"red^">=</font></i> <u><font color=^"red^">fhsmenu</font></u>
+FHS_MOTD_LN4 = Skriv i <u>chatten</u> <font color=^"red^">/fhshelp</font> f'o'r att ta upp det h'a'r f'o'nstret
