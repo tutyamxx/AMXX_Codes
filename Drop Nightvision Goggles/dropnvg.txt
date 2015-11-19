@@ -1,0 +1,43 @@
+[en]
+CANNOT_DROP_NVG = You cannot drop NVG because plugin is disabled!
+MUST_BE_ALIVE = You must be alive to drop a NVG!
+DONT_HAVE_NVG = You don't have a NVG to drop!
+PICK_UP_NVG = You picked up a NVG!
+NVG_ON_FLOOR = You dropped the NVG!
+INFO_HUD_NVG = In this server you can drop the NVG Goggles!^nType in console bind ^"key^" dropnvg and press that key to drop!
+ALLREADY_HAVE_NVG = You allready have a NVG!
+
+[ro]
+CANNOT_DROP_NVG = Nu poti arunca nightvisionul pentru ca pluginul este oprit!
+MUST_BE_ALIVE = Trebuie sa fi viu pentru a arunca nightvisionul!
+DONT_HAVE_NVG = Nu ai nightvision ca sa il arunci!
+PICK_UP_NVG = Tocmai ai luat un nightvision!
+NVG_ON_FLOOR = Ai aruncat nightvisionul!
+INFO_HUD_NVG = In acest server poti arunca nightvisionul!^nScrie in consola bind ^"tasta^" dropnvg si apasa acea tasta pentru a arunca pe jos nightvisionul!
+ALLREADY_HAVE_NVG = Ai deja nightvision!
+
+[es]
+CANNOT_DROP_NVG = No podes soltar la Night Vision porque el plugin esta desactivado!
+MUST_BE_ALIVE = Tenes que estar vivo para soltar la NVG!
+DONT_HAVE_NVG = No tenes una NVG para soltar!
+PICK_UP_NVG = Agarraste una NVG!
+NVG_ON_FLOOR = Soltaste la NVG!
+INFO_HUD_NVG = En este server podes soltar la NightVision!^nEscribi en consola bind ^"tecla^" dropnvg y apreta esa tecla para soltarla!!
+ALLREADY_HAVE_NVG = Ya tenes una NVG!
+
+[nl]
+CANNOT_DROP_NVG = Je kan je NachtKijker niet weggooien want de plugin is uitgeschakeld!
+MUST_BE_ALIVE = Je moet leven om een NachtKijker weg te gooien!
+DONT_HAVE_NVG = Je hebt geen nachtkijker om weg te gooien!
+PICK_UP_NVG = Je pakte een NachtKijker op!
+NVG_ON_FLOOR = Je gooide de NachtKijker weg!
+INFO_HUD_NVG = In deze server kan jij jouw NachtKijker weggooien!^nSchrijf 'bind ^"toets^" dropnvg' en druk op de toets om het te laten vallen!
+ALLREADY_HAVE_NVG = Je hebt reeds een NachtKijker! 
+
+[lt]
+CANNOT_DROP_NVG = Tu negali ismeti NVG! 
+MUST_BE_ALIVE = Tu privalai but gyvas!
+DONT_HAVE_NVG = Tu neturi NVG!
+PICK_UP_NVG = Katik pakelei NVG!
+NVG_ON_FLOOR = Tu katik ismetei NVG!
+INFO_HUD_NVG = Siame serveryje tu gali ismeti, pakelti NVG naktini matyma
