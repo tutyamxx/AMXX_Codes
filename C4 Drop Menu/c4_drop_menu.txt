@@ -1,0 +1,48 @@
+[en]
+ARE_YOU_SURE = \dAre you sure?^n
+SHOW_DROP_COST = \y( Drop cost is: \r%d$ \y)^n^n
+YES_I_WANT = \r1. \wYes, i want to drop \yC4 \wand i will loose money!^n
+NO_I_DONT = \r2. \wNope, i don't want to drop the \yC4\w...^n
+DONT_HAVE_CASH = You don't have enough money to drop C4 ( need %d$ )...
+
+[ro]
+ARE_YOU_SURE = \dEsti sigur?^n
+SHOW_DROP_COST = \y( Costul pentru aruncare este: \r%d$ \y)^n^n
+YES_I_WANT = \r1. \wDa, vreau sa arunc \yC4 \wsi sa pierd din bani!^n
+NO_I_DONT = \r2. \wNup, nu vreau sa arunc \yC4\w...^n
+DONT_HAVE_CASH = Nu ai destui bani ca sa arunci C4 ( ai nevoie de %d$ )...
+
+[nl]
+ARE_YOU_SURE = \dBen je zeker?^n
+SHOW_DROP_COST = \y( Drop kosten zijn: \r%d$ \y)^n^n
+YES_I_WANT = \r1. \wJa, ik wil de \yC4 \w neerleggen en geld verliezen!^n
+NO_I_DONT = \r2. \wNee, ik wil de \yC4\w niet neerleggen...^n
+DONT_HAVE_CASH = Je hebt niet genoeg geld om de C4 neer te leggen ( %d$ nodig )... 
+
+[es]
+ARE_YOU_SURE = \dEstas seguro?^n
+SHOW_DROP_COST = \y( Soltar la bomba cuesta: \r%d$ \y)^n^n
+YES_I_WANT = \r1. \wSi quiero soltar la \yC4 \y perder mi plata!^n
+NO_I_DONT = \r2. \wNo, no quiero soltar la \yC4\w...^n
+DONT_HAVE_CASH = No tenes plata para soltar la C4 ( Necesitas %d$ )...
+
+[fr]
+ARE_YOU_SURE = \dEs-tu sure ?^n
+SHOW_DROP_COST = \y( Deposer coute : \r%d$ \y)^n^n
+YES_I_WANT = \r1. \wOui, je veux deposer la \yBombe \w et je perdrais de l'argent !^n
+NO_I_DONT = \r2. \wNope, je ne veux pas deposer la \yBombe\w...^n
+DONT_HAVE_CASH = Tu n'as pas assez d'argent pour deposer la Bombe ( besoin de %d$ )...
+
+[de]
+ARE_YOU_SURE = \dBist du sicher?^n
+SHOW_DROP_COST = \y( Die Kosten fuers Wegwerfen sind: \r%d$ \y)^n
+YES_I_WANT = \r1.\wJa ich moechte das \yC4 \wwegwerfen und Geld verlieren!^n
+NO_I_DONT = \r2. \wNein, ich moechte das \yC4 \wnicht wegwerfen...^n
+DONT_HAVE_CASH = Du hast nicht genug Geld um das C4 wegzuwerfen ( du brauchst %d$ )...
+
+[bg]
+ARE_YOU_SURE = \dSiguren li si?^n
+SHOW_DROP_COST = \y( Za da q hvarlite sumata e : \r%d$ \y)^n^n
+YES_I_WANT = \r1. \wDa iskam da q hvurlq \yC4 \wi shte zagubq pari!^n
+NO_I_DONT = \r2. \wNe ne iskam da hvarlq \yC4\w...^n
+DONT_HAVE_CASH = Nqmate dostatachno pari za da hvarlite bombata( trqbva da imat e %d$ )... 
