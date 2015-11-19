@@ -1,0 +1,29 @@
+[en]
+BLOODY_PRINT_CHAT = [BloodySlap] ADMIN:%s bloody-slapped %s with [%d] damage!
+BLOODY_LOG_FILE = [BloodySlap] ADMIN:%s bloody-slapped %s with [%d] damage!
+BLOODY_MORE_DMG = [BloodySlap] User slapped! But you must do more than 0 damage to bloodyslap player!
+
+[ro]
+BLOODY_PRINT_CHAT = [BloodySlap] ADMIN:%s i-a dat o palma sangeroasa lui %s cu [%d] putere!
+BLOODY_LOG_FILE = [BloodySlap] ADMIN:%s i-a dat o palma sangeroasa lui %s cu [%d] putere!
+BLOODY_MORE_DMG = [BloodySlap] Jucatorul a primit palma! Dar trebuie sa folosesti mai mult de 0 putere pentru a-i da o palma sangeroasa!
+
+[es]
+BLOODY_PRINT_CHAT = [BloodySlap] EL ADMIN:%s Slapeo Sangrientamente a %s con [%d] de daño!
+BLOODY_LOG_FILE = [BloodySlap] EL ADMIN:%s Slapeo Sangrientamente a %s con [%d] de daño!
+BLOODY_MORE_DMG = [BloodySlap] Usuario Slapeado! Pero tenes que hacer mas de 0 daño para ver sangre! 
+
+[nl]
+BLOODY_PRINT_CHAT = [BloodySlap] ADMIN:%s Sloeg %s met veel bloed en [%d] schade !
+BLOODY_LOG_FILE = [BloodySlap] ADMIN: %s Sloeg %s met veel bloed en [%d] schade!
+BLOODY_MORE_DMG = [BloodySlap] Gebruiker geslagen! Maar je moet meer dan 0 schade doen om een slag met veel bloed te maken! 
+
+[de]
+BLOODY_PRINT_CHAT = [BloodySlap] ADMIN:%s hat %s with [%d] damage blutig geschlagen !
+BLOODY_LOG_FILE = [BloodySlap] ADMIN:%s hat %s with [%d] damage blutig geschlagen !
+BLOODY_MORE_DMG = [BloodySlap] Spieler geschlagen! Aber du musst mehr als 0 Schaden zufuegen, fuer einen blutigen Schlag! 
+
+[sv]
+BLOODY_PRINT_CHAT = [BloodySlap] ADMIN:%s blod-smiskade %s med [%d] skada!
+BLOODY_LOG_FILE = [BloodySlap] ADMIN:%s blod-smiskade %s med [%d] skada!
+BLOODY_MORE_DMG = [BloodySlap] Spelare smiskad! Men du maste skada mer 'a'n 0 i skada f'o'r att blod-smiska spelaren!

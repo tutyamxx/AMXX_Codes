@@ -1,0 +1,34 @@
+[en]
+MESSAGE_DISABLED = [POST] Sorry, the plugin is disabled!
+ADVERTISE_MESSAGE = [POST] In this server you can type a POST message! Say /POST TEXT to write a colored message!
+ADVERTISE_MESSAGE2 = [POST] POST message cost (%d$) !
+DONT_HAVE_MONEY = [POST] You don't have enough money to type a POST message!
+NOT_ALIVE = [POST] Dead players can't write a POST message!
+
+[ro]
+MESSAGE_DISABLED = [POST] Scuze, pluginul este oprit!
+ADVERTISE_MESSAGE = [POST] In acest server poti scrie un mesaj sub forma de POST ! Scrie /POST TEXT pentru a scrie un mesaj colorat!
+ADVERTISE_MESSAGE2 = [POST] Costul mesajului POST este de (%d$) !
+DONT_HAVE_MONEY = [POST] Nu ai destui bani pentru a scrie un mesaj de tip POST!
+NOT_ALIVE = [POST] Jucatorii morti nu pot scrie mesaje de tip POST!
+
+[nl]
+MESSAGE_DISABLED = [POST] Sorry, de plugin is uitgeschakeld!
+ADVERTISE_MESSAGE = [POST] In deze server kan je een post bericht schrijven! Zeg /POST TEXT om een gekleurd bericht te verzenden!
+ADVERTISE_MESSAGE2 = [POST] Post bericht kost (%d$) !
+DONT_HAVE_MONEY = [POST] Je hebt niet genoeg geld om een POST bericht te verzenden!
+NOT_ALIVE = [POST] Dode spelers kunnen geen POST berichten verzenden! 
+
+[es]
+MESSAGE_DISABLED = [POST] Lo sentimos,este plugin esta desactivado!
+ADVERTISE_MESSAGE = [POST] En este server puedes postear un mensaje!Tipea /POST TEXTO para escribir un mensaje!
+ADVERTISE_MESSAGE2 = [POST] Costo del POST (%d$) !
+DONT_HAVE_MONEY = [POST] No tienes suficiente dinero para POSTEAR un mensaje!
+NOT_ALIVE = [POST] Los muertos no pueden POSTEAR un mensaje! 
+
+[de]
+MESSAGE_DISABLED = [POST] Sorry, der Plugin ist aus!
+ADVERTISE_MESSAGE = [POST] auf diesem Server kannst du eine POST Nachricht schreiben! Sage /POST TEXT um eine farbige Nachricht zu schreiben!
+ADVERTISE_MESSAGE2 = [POST] POST Nachricht kostet (%d$) !
+DONT_HAVE_MONEY = [POST] Du hast nicht genungend Geld um eine POST Nachricht zu schreiben!
+NOT_ALIVE = [POST] Tote spieler koennen keine POST nachricht schreiben! 

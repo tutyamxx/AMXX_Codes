@@ -1,0 +1,34 @@
+[en]
+CANNOT_CREATE = [TeamSpr] Sorry, the plugin is disabled!
+ALLREADY_HAVE = [TeamSpr] Sorry, you allready have a sprite up on your head! You cannot create another one!
+SUCCESSFULLY_CREATED = [TeamSpr] Successfully created a ^"Team Sprite Icon^" on your Head!
+MUST_STAY_UP = [TeamSpr] Sorry, the sprite must stay up on your Head!
+SUCCESSFULLY_DELETED = [TeamSpr] Successfully deleted the ^"Team Sprite Icon^"!
+
+[ro]
+CANNOT_CREATE = [TeamSpr] Scuze, pluginul este oprit!
+ALLREADY_HAVE = [TeamSpr] Scuze, deja ai o icoana asupra capului! Nu mai poti sa creezi inca una!
+SUCCESSFULLY_CREATED = [TeamSpr] A fost creata cu succes ^"Icoana Echipei^" pe capul tau!
+MUST_STAY_UP = [TeamSpr] Scuze, icoana trebuie sa stea deasupra capului tau!
+SUCCESSFULLY_DELETED = [TeamSpr] A fost stearsa cu succes ^"Icoana Echipei^"!
+
+[hu]
+CANNOT_CREATE = [TeamSpr] Elnézést plugin le!
+ALLREADY_HAVE = [TeamSpr] Sajnálom, de már van egy ikon a fejed! Itt hozhat létre egy újat!
+SUCCESSFULLY_CREATED = [TeamSpr] hozták létre, sikeresen ^"Team Icon^" a fejére!
+MUST_STAY_UP = [TeamSpr] Bocs, az ikon fent kell tartani a fejed!
+SUCCESSFULLY_DELETED = [TeamSpr] Az eltávolított sikeresen ^"Team icon^"!
+
+[nl]
+CANNOT_CREATE = [TeamSpr] Sorry, de plugin is uitgeschakeld!
+ALLREADY_HAVE = [TeamSpr] Sorry, je hebt al een tekening boven je hoofd! Je kan er geen twee hebben!
+SUCCESSFULLY_CREATED = [TeamSpr] Er is een ^"Team Icoon^" boven je hoofd getekend!
+MUST_STAY_UP = [TeamSpr] Sorry, de tekening moet boven je hoofd blijven!
+SUCCESSFULLY_DELETED = [TeamSpr] Het ^"Team Icoon^" is succesvol verwijderd! 
+
+[bp]
+CANNOT_CREATE = [TeamSpr] Desculpe-me, o plugin esta desativado!
+ALLREADY_HAVE = [TeamSpr] Desculpe, voce ja tem um marcador acima de sua cabeca.
+SUCCESSFULLY_CREATED = [TeamSpr] ^"Team Sprite Icon^" criado com sucesso!
+MUST_STAY_UP = [TeamSpr] Desculpe, a sprit precisa ficar acima de sua cabeca.
+SUCCESSFULLY_DELETED = [TeamSpr] ^"Team Sprite Icon^" foi deletado! 
