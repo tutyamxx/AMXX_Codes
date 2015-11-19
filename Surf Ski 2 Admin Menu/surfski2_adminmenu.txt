@@ -1,0 +1,110 @@
+[en]
+
+SURFSKI2_DISABLED = Sorry, the plugin is disabled!
+SURFSKI2_RESTRICTED = Sorry, you don't have access to this menu!
+SURFSKI2_SELECT = Select a Player:
+SURFSKI2_MOVETO = Move player to:
+SURFSKI2_GUNROOM = Gun Room
+SURFSKI2_SCOUTPLACE = Scout Place
+SURFSKI2_MARIOROOM = Mario Room
+SURFSKI2_AWPPLACE = AWP Place
+SURFSKI2_CTSPAWN = Counter-Terrorist Spawn
+SURFSKI2_TSPAWN = Terrorist Spawn
+SURFSKI2_ACTIVITY = ADMIN %s: has teleported %s successfully, to a specific location!
+SURFSKI2_TELEPORTED = You have been teleported!
+SURFSKI2_LOGAMX = ADMIN %s: has teleported %s successfully, to a specific location!
+
+[ro]
+
+SURFSKI2_DISABLED = Scuze, dar pluginul este oprit!
+SURFSKI2_RESTRICTED = Scuze, nu ai acces la acest meniu!
+SURFSKI2_SELECT = Selecteaza jucator:
+SURFSKI2_MOVETO = Muta jucatorul la:
+SURFSKI2_GUNROOM = Camera Armelor
+SURFSKI2_SCOUTPLACE = Locul Scout-urilor
+SURFSKI2_MARIOROOM = Camera Mario
+SURFSKI2_AWPPLACE = Locul AWP-urilor
+SURFSKI2_CTSPAWN = Baza CT
+SURFSKI2_TSPAWN = Baza T
+SURFSKI2_ACTIVITY = ADMIN %s: l-a teleportat pe %s cu succes, intr-o locatie specifica!
+SURFSKI2_TELEPORTED = Tocmai ai fost teleportat!
+SURFSKI2_LOGAMX = ADMIN %s: l-a teleportat pe %s cu succes, intr-o locatie specifica!
+
+[de]
+
+SURFSKI2_DISABLED = Entschuldigung, aber das Plugin ist deaktiviert!
+SURFSKI2_RESTRICTED = Entschuldigung, du hast keine Rechte zu diesem Menue!
+SURFSKI2_SELECT = Waehle einen Spieler:
+SURFSKI2_MOVETO = Teleportiere Spieler zu:
+SURFSKI2_GUNROOM = Waffen Raum
+SURFSKI2_SCOUTPLACE = Scout Platz
+SURFSKI2_MARIOROOM = Mario Zimmer
+SURFSKI2_AWPPLACE = AWP Platz
+SURFSKI2_CTSPAWN = Anti-Terror-Einheit Startpunkt
+SURFSKI2_TSPAWN = Terroristen Startpunkt
+SURFSKI2_ACTIVITY = ADMIN %s: hat %s erfolgreich teleportiert!
+SURFSKI2_TELEPORTED = Du wurdest teleportiert!
+SURFSKI2_LOGAMX = ADMIN %s: hat %s erfolgreich teleportiert! 
+
+[nl]
+SURFSKI2_DISABLED = Sorry, de plugin is uitgeschakeld!
+SURFSKI2_RESTRICTED = Sorry, je hebt geen toegang tot dit menu!
+SURFSKI2_SELECT = Selecteer een speler:
+SURFSKI2_MOVETO = Verplaats speler naar:
+SURFSKI2_GUNROOM = Wapen Kamer
+SURFSKI2_SCOUTPLACE = Scout Plaats
+SURFSKI2_MARIOROOM = Mario Kamer
+SURFSKI2_AWPPLACE = AWP Plaats
+SURFSKI2_CTSPAWN = Counter-Terrorist Spawn
+SURFSKI2_TSPAWN = Terrorist Spawn
+SURFSKI2_ACTIVITY = ADMIN %s: heeft %s successvol geteleporteerd naar een onbekende locatie!
+SURFSKI2_TELEPORTED = Jij bent geteleporteerd!
+SURFSKI2_LOGAMX = ADMIN %s: heeft %s successvol geteleporteerd naar een onbekende locatie! 
+
+[es]
+
+SURFSKI2_DISABLED = Plugin Desactivado
+SURFSKI2_RESTRICTED = No tenes acceso a este menu
+SURFSKI2_SELECT = Seleccionar Jugador:
+SURFSKI2_MOVETO = Mover jugador a:
+SURFSKI2_GUNROOM = Armas
+SURFSKI2_SCOUTPLACE = Scout
+SURFSKI2_MARIOROOM = Mario 
+SURFSKI2_AWPPLACE = AWP
+SURFSKI2_CTSPAWN = CT Spawn
+SURFSKI2_TSPAWN = TT Spawn
+SURFSKI2_ACTIVITY = ADMIN %s: teletransporto a %s a un lugar especifico!
+SURFSKI2_TELEPORTED = Has sido teletransportado
+SURFSKI2_LOGAMX = ADMIN %s: teletransporto a %s a un lugar especifico!
+
+[sv]
+
+SURFSKI2_DISABLED = Tyv'a'rr, pluginet 'a'r avst'a'ngt
+SURFSKI2_RESTRICTED = Tyv'a'rr, du har inte tillgang till denna meny!
+SURFSKI2_SELECT = V'a'lj en spelare:
+SURFSKI2_MOVETO = Flytta spelare till:
+SURFSKI2_GUNROOM = Vapen Rummet (Gun Room)
+SURFSKI2_SCOUTPLACE = Scout St'a'llet (Scout Place)
+SURFSKI2_MARIOROOM = Mario Rummet (Mario Room)
+SURFSKI2_AWPPLACE = AWP St'a'llet (AWP Place)
+SURFSKI2_CTSPAWN = Counter-Terroristernas Startplats
+SURFSKI2_TSPAWN = Terroristernas Startplats
+SURFSKI2_ACTIVITY = ADMIN %s: Teleporterade framgangsrikt %s till en s'a'rskild plats!
+SURFSKI2_TELEPORTED = Du har blivit teleporterad !
+SURFSKI2_LOGAMX = ADMIN %s: Teleporterade framgangsrikt %s till en s'a'rskild plats!
+
+[pl]
+
+SURFSKI2_DISABLED = Niestety, ale plugin jest wylaczony!
+SURFSKI2_RESTRICTED = Nie masz uprawnien na ta komende!
+SURFSKI2_SELECT = Wybierz gracza
+SURFSKI2_MOVETO = Przenies gracza do:
+SURFSKI2_GUNROOM = Pokoj broni
+SURFSKI2_SCOUTPLACE = Miejscowka ze scoutami
+SURFSKI2_MARIOROOM = Pokoj mario
+SURFSKI2_AWPPLACE = Miejsce dla snajperow (AWP arena)
+SURFSKI2_CTSPAWN = Na resp CT
+SURFSKI2_TSPAWN = Na resp TT
+SURFSKI2_ACTIVITY = ADMIN %s: przeteleportowal %s , do wyznaczonego miejsca!
+SURFSKI2_TELEPORTED = Zostales przeteleportowany!
+SURFSKI2_LOGAMX = ADMIN %s: przeteleportowal %s do wybranej lokacji!
