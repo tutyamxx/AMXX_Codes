@@ -1,0 +1,59 @@
+Predator By tuty
+
+Comenzi chat:
+-------------
+
+- /predator - cumperi predator pt x frage si x$ dolari!
+
+
+Comenzi care NU TREBUIE BINDATE:
+--------------------------------
+
+- Tasta T(spray) - Activezi/Dezactivezi cloak
+- Tasta N(nightvision) - Schimbi viziunea mastii predatorului
+- Tasta F(flashlight) - Tragi cu plasma beams
+- Tasta G(drop) - Tragi cu predator disks
+- Tasta CTRL + JUMP - Faci super predator high jump
+- Tasta R(reload) - Faci Dirt Pound, adica intr-o raza de 400 unitati, inamicii apropiati vor lua daune setate prin cvar, si ecranul lor va tremura pentru putin timp, si un efect frumos de 3 cilindrii la activare.
+
+* La fiecare spawn daca ai cate fraguri si bani iti trebuie, iti apare meniu daca vrei sau nu sa devii predator!
+* Nu i se aud pasii!
+
+Tip de Viziuni a Mastii:
+-------------------------
+
+1. Viziune Normala - vezi totul normal
+2. Viziune Infrarosie - ecran rosu, si inamicii ii vezi in glow albastru
+3. Viziune Ultraviolet - ecran mov, toate entitatile, func_breakable etc o sa le vezi cu glow alb/maro transparent, iar ostatecii o sa ii vezi rosii
+4. Viziune Echipa - ecran gri, coechipierii si armele aruncate pe jos o sa le vezi cu un glow galben transparent
+5. Viziune Nocturna - ecran verde, ai luminozitate la locuri intunecate
+
+
+
+Informatii:
+------------
+
+- Predatorul arunca bomba cand se transforma, nu poate lua arme, planta bomba!
+- Are doar mainile cu care poate ucide.
+- Mainile dau daune duble fata de cutitul omului.
+- Discul urmareste inamicul apropiat si il omoara instant, sarind carnea si capul din el! Cateodata mai si rateaza!
+- Plasma beam merge direct unde tintesti, si da daune depinzand de cvar si de explozie.
+
+
+Cvaruri:
+--------
+
+* predator_cost "16000" - cati bani iti vor fi luati odata ce devii predator 
+* predator_frag_cost "15" - cate fraguri iti vor fi luate odata ce devii predator
+* predator_health "300" - cata viata are predatorul
+* predator_armor "500" - cata armura are predatorul
+* predator_speed "500" - cata viteza are predatorul
+* predator_gravity "0.5" - cata gravitatie are predatorul
+* predator_dirtpound_dmg "15" - ce daune face cu abilitatea dirtpound
+* predator_plasma_dmg "45" - ce daune face cu abilitatea plasma beam
+* predator_disks "3" - cate discuri are predatorul
+* predator_plasmas "3" - cate plasme are predatorul
+* predator_automenu "1" - daca e activat, la fiecare spawn, daca ai fragurile si banii necesari, iti va aparea un meniu daca vrei sau nu sa devii predator, daca e dezactivat, va trebuii sa scrii in chat manual, /predator, pentru a devenii predator
+* predator_plasma_radius "160" - raza de explozie a plasmei
+* predator_cloak_percent "3" - procentajul de la 1 la 100 al vizibilitatii predatorului cand are cloak activat. 3 insemnand ca este 3% vizibil
+
