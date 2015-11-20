@@ -1,0 +1,68 @@
+body {
+	padding: 0 0 0 0;
+	background-color:#000;
+}
+td.banner{
+background :url('');
+width: 1005px;
+height: 110px;	
+}
+table.contents{
+	border: 1px;
+	width: 1024px;
+	height: 500px;
+	margin-top: -295px;
+}
+td.menu{
+background :url('images/menu.png');
+width: 196px;
+height: 27px;	
+}
+
+td.partners{
+background :url('images/partners.png');
+width: 196px;
+height: 27px;	
+}
+
+td.link{
+background-color: #eeeeee;
+width: 196px;
+height: 25px;
+color: #66ddff;	
+}
+
+td.link a{
+background-color: #eeeeee;
+width: 196px;
+height: 25px;
+color: #33aaff;
+text-decoration: none;	
+}
+td.link a:hover{
+background-color: #eeeeee;
+width: 196px;
+height: 25px;
+color: red;
+text-decoration: underline;	
+}
+table.tops {
+width: 810px;
+}
+td.topplayer{
+background: url('images/top.png');
+width: 850px;
+height: 28px;	
+}
+td.top-background{
+background-color: #eeeeee;
+border-style:solid;
+border-width:1px;
+border-color: #bbbbbb;
+}
+td.top-users{
+border-style:solid;
+border-width:1px;
+border-color: #bbbbbb;	
+text-align: center;
+}
