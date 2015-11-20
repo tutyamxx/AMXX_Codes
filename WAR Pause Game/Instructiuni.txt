@@ -1,0 +1,27 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Descriere plugin:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adminul scrie .pause si pune pauza pe server. In ce consta pauza? Jucatorii nu se mai pot misca, pot vedea, si pot scrie!
+Va aparea un ceas descrescator in HUD aratand cat timp mai este pana se va opri pauza.
+De la ultimele 10 secunde se vor auzi sunete gen: ten, nine, eight, sevent, six.. etc
+Dupa aceea HUDul va disparea si pauza se va opri, jucatorii putand sa mearga din nou fara a se bloca.
+Dar in timp ce e pauza, daca e ceva, adminul poate opri pauza scriind in chat .stoppause si pauza
+se va opri!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Instalare:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*	1. Compilezi pluginul dupa ce ai editat ce ai vrut prin el [e bine sa nu te bagi unde nu stii
+	defapt, editeaza doar textele, culoarea hudului si timpul.
+* 	2. Pui fisierul time_lenght.txt in data/lang
+
+*	3. Uitate la poze.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Atentie!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*	Ceasul acela de tip X minutes and X seconds va arata in limba in care e setata serverul!
+Deci daca in vault.ini server_language este setat pe "en" va arata in engleza, dar
+daca este setat in "ro" va arata mesajul in romana.!
