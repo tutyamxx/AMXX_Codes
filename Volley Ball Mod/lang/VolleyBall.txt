@@ -1,0 +1,223 @@
+//Voley Ball Mod by tuty@mapping.ro
+//English
+[en]
+
+FILE_LOADED = File ^"%s^" loaded successfully!
+FILE_NOT_FOUND = Error! File ^"%s^" not found!
+WILL_HAVE_BALL = ^n%s will have the ball in^n[%d] seconds!
+RED_TEAM_SLAY = Red team died!^nBecause %s was on enemy terrain!
+BLUE_TEAM_SLAY = Blue team died!^nBecause %s was on enemy terrain!
+RED_TEAM_WIN = Last player who had the ball is: %s!^nRed team win 1 point!
+RED_TEAM_SCORE = Score: Red Team: %d | Blue Team: %d
+BLUE_TEAM_WIN = Last player who had the ball is: %s!^nBlue team win 1 point!
+BLUE_TEAM_SCORE = Score: Blue Team: %d | Red Team: %d
+WELCOME_MSG1 = Hi %s, welcome to %s! 
+WELCOME_MSG2 = This server is using VolleyBall Mod made by tuty@mapping.ro!
+HUD_SCOREBOARD = Total Score: %d^nTeam Score:^nBlue: %d | Red: %d^nTimeleft: %d:%02d^nPlayers: %d/%d
+DONT_HAVE_ACCESS = You don' have access to this command!
+GAME_WILL_START = The game will start now!
+GAME_WILL = The game will start now!
+CANNOT_SUICIDE = You can't suicide on this server :)
+INFO_1 = Volley Ball Mod made by tuty@mapping.ro
+INFO_2 = Is just volley. Everyone know how to play volley :)
+INFO_3 = When the round starts, will choose a random player and will have the ball above of his head
+INFO_4 = Pressing SPACE when ball is comming to you and holding your crosshair angle to enemy terrain the ball will go where you holding the crosshair
+INFO_5 = When a team drop the ball on enemy terrain will have 1 frag + 1 point in team score
+INFO_6 = Chat commands:
+INFO_7 = - /help - will open the console with this info about the mod!
+INFO_8 = - /reset - restart the match [admin only]
+
+//Polish
+[pl]
+
+FILE_LOADED = Plik ^"%s^" Zostal Poprawnie Zaladowany!
+FILE_NOT_FOUND = Blad! plik ^"%s^" nie zostal odnaleziony!
+WILL_HAVE_BALL = ^n%s bedzie mial pilke za^n[%d] sekund!
+RED_TEAM_SLAY = Druzyna Czerwona Umarla!^nPoniewaz %s byla na Terenie Druzyny Niebieskiej!
+BLUE_TEAM_SLAY = Druzyna Niebieska Umarla!^nPoniewaz %s byla na terenie Druzyny Czerwonej!
+RED_TEAM_WIN = Ostatni Gracz Ktory Posiadal Pilke to: %s!^nDruzyna Czerwona zdobywa 1 Punkt!
+RED_TEAM_SCORE = Wynik: Druzyna Czerwona: %d | Druzyna Niebieska: %d
+BLUE_TEAM_WIN = Ostatni Gracz Ktory Posiadal Pilke to: %s!^nDruzyna Niebieska zdobywa 1 Punkt!
+BLUE_TEAM_SCORE = Wynik: Druzyna Niebieska: %d | Druzyna Czerwona: %d
+WELCOME_MSG1 = Witaj %s, na %s! 
+WELCOME_MSG2 = Serwer Korzysta z VolleyBall Mod by tuty@mapping.ro!
+HUD_SCOREBOARD = Wynik Calkowity: %d^nWynik Druzyny:^nNiebieskiej: %d | Czerwonej: %d^nPozostalo Czasu: %d:%02d^nGraczy: %d/%d
+DONT_HAVE_ACCESS = Nie masz dostepu do tej Komendy!
+GAME_WILL_START = Gra Rozpoczyna sie Teraz!
+GAME_WILL = Gra Rozpoczyna sie Teraz!
+CANNOT_SUICIDE = Nie Mozesz Popelnic popelnic samobojstwa :)
+INFO_1 = Volley Ball Mod by tuty@mapping.ro
+INFO_2 = To tylko Siatkowka. Kazdy Wie Jak sie w to gra :)
+INFO_3 = Gry Runda sie rozpocznie, mod wybierze automatycznie gracza ktory dostanie pilke
+INFO_4 = Nacisnij SPACJE gdy pilka zblida sie do ciebie i trzymaj celownik pod takim katem by widziec teren przeciwnika
+INFO_5 = Gdy Druzyna Upusci Pilke na terenie wroga to dostaje 1 Fraga oraz 1 Punkt dla Danej Druzyny
+INFO_6 = Dostepne Komendy:
+INFO_7 = - /help - Otworzy sie Konsola z Informacjami o Modzie
+INFO_8 = - /reset - Resetuje Mecz [ Tylko dla Adminow! ]
+
+//Spanish
+[es]
+
+FILE_LOADED = Archivo ^"%s^" cargado!
+FILE_NOT_FOUND = Error! Archivo ^"%s^" no encontrado!
+WILL_HAVE_BALL = ^n%s tendra el balon en^n[%d] segundos!
+RED_TEAM_SLAY = El Equipo Rojo ha muerto!^nPorque %s estuvo en territorio enemigo!
+BLUE_TEAM_SLAY = El Equipo Azul ha muerto!^nPorque %s estuvo en territorio enemigo!
+RED_TEAM_WIN = Ultimo jugador que tuvo el balon: %s!^nEl Equipo Rojo ha ganado 1 punto!
+RED_TEAM_SCORE = Puntaje: Equipo Rojo: %d | Equipo Azul: %d
+BLUE_TEAM_WIN = Ultimo jugador que tuvo el balon: %s!^nEl Equipo Azul ha ganado 1 punto!
+BLUE_TEAM_SCORE = Puntaje: Equipo Azul: %d | Equipo Rojo: %d
+WELCOME_MSG1 = Hola %s, bienvenido a %s! 
+WELCOME_MSG2 = Este servidor esta usando VolleyBall Mod hecho por tuty@mapping.ro!
+HUD_SCOREBOARD = Puntaje Total: %d^nPuntaje de Equipos:^nAzul: %d | Rojo: %d^nTiempo Restante: %d:%02d^nJugadores: %d/%d
+DONT_HAVE_ACCESS = No tienes acceso a este comando!
+GAME_WILL_START = El juego comenzara ya!
+GAME_WILL = El juego comenzara ya!
+CANNOT_SUICIDE = No puedes suicidarte en este servidor
+INFO_1 = Volley Ball Mod hecho por tuty@mapping.ro
+INFO_2 = Es simplemente volley. Todos saben como jugar volley 
+INFO_3 = Cuando la ronda empieza, se elegira un jugador al azar y tendra el balon por encima de su cabeza
+INFO_4 = Presionando SPACE cuando el balon esta por venir a ti y teniendo tu angulo de mira en territorio enemigo el balon ira donde tengas la mira
+INFO_5 = Cuando un equipo hace caer el balon en territorio enemigo tendra 1 frag + 1 punto en el puntaje del equipo
+INFO_6 = Comandos de Chat:
+INFO_7 = - /help - abrira la consola con esta informacion acerca del mod!
+INFO_8 = - /reset - reinicia la partida [solo admin]
+
+//Turkish
+[tr]
+
+FILE_LOADED = ^"%s^" basariyla yuklendi!
+FILE_NOT_FOUND = Hata! ^"%s^" bulunamadi!
+WILL_HAVE_BALL = ^n%s topu ^n[%d] saniye icinde alicak!
+RED_TEAM_SLAY = Kirmizi Takim Oldu!^nCunku %s dusman topraklarindaydi!
+BLUE_TEAM_SLAY = Mavi Takim Oldu!^nCunku %s dusman topraklarindaydi!
+RED_TEAM_WIN = Topa sahip olan son oyuncu: %s!^nKirmizi Takim 1 puan kazandi!
+RED_TEAM_SCORE = Durum: Kirmizi Takim: %d | Mavi Takim: %d
+BLUE_TEAM_WIN = Topa sahip olan son oyuncu: %s!^nMavi Takim 1 puan kazandi!
+BLUE_TEAM_SCORE = Durum: Mavi Takim: %d | Kirmizi Takim: %d
+WELCOME_MSG1 = Merhaba %s, %s 'e Hos Geldiniz! 
+WELCOME_MSG2 = Bu sunucu VolleyBall Mod kullaniyor, yapimci tuty@mapping.ro!
+HUD_SCOREBOARD = Genel Durum: %d^nTakim Durumu:^nMavi: %d | Kirmizi: %d^nKalan Sure: %d:%02d^nOyuncular: %d/%d
+DONT_HAVE_ACCESS = Bu komut icin yetkiniz bulunmuyor!
+GAME_WILL_START = Oyun simdi baslayacak!
+GAME_WILL = Oyun simdi baslayacak!
+CANNOT_SUICIDE = Bu sunucuda Kendini Oldurmezsin :D
+INFO_1 = Volley Ball Mod , Yapimci tuty@mapping.ro
+INFO_2 = sadece voleybol. Herkes voleybolun nasil oynandigini bilir :D
+INFO_3 = El basladiginda, topa sahip olacak oyuncu rastgele secilir ve top oyuncunun basinin ustundedir.
+INFO_4 = Top size geldiginde SPACE tusuna basili tutup farenin imlecini dusman topragina yoneltiniz. Top imlecin oldugu konuma gidecektir!
+INFO_5 = Top dusman takimin topraklarina dustugu anda karsi takim 1 frag + 1 puan kazanir.
+INFO_6 = SAY komutlari:
+INFO_7 = - /help - bilgilendirmeleri konsolda goruntuler.!
+INFO_8 = - /reset - maci yeniden baslatir [yalnizca adminler]
+
+//Bulgarian
+[bg]
+
+FILE_LOADED = Faila ^"%s^" zaredi uspeshno!
+FILE_NOT_FOUND = Greshka! Faila ^"%s^" ne e nameren!
+WILL_HAVE_BALL = ^n%s shte ima topkata sled ^n[%d] sekundi!
+RED_TEAM_SLAY = Cherveniq otbor umrq!^nZashtoto %s beshe na terena na protivnicite!
+BLUE_TEAM_SLAY = Siniq otbor umrq!^nZashtoto %s beshe na terena na protivnicite!
+RED_TEAM_WIN = Posledniq igrach v koito beshe topkata: %s!^nCherveniq otbor pecheli 1 tochka!
+RED_TEAM_SCORE = Rezultat: Cherveniq otbor: %d | Siniq otbor: %d
+BLUE_TEAM_WIN = Posledniq igrach v koito beshe topkata: %s!^nSiniq otbor pecheli edna tochka!
+BLUE_TEAM_SCORE = Rezultat: Siniq otbor: %d | Cherveniq otbor: %d
+WELCOME_MSG1 = Zdravei %s, dobre doshal v %s! 
+WELCOME_MSG2 = Tozi sarvar izpolzva VolleyBall Mod ot tuty@mapping.ro!
+HUD_SCOREBOARD = Obsht rezultat: %d^nOtboren rezultat:^nSini: %d | Cherveni: %d^nOstavashto vreme: %d:%02d^nIgrachi: %d/%d
+DONT_HAVE_ACCESS = Nqmash dostap do tazi komanda!
+GAME_WILL_START = Igrata shte zapochne sega!
+GAME_WILL = Igrata shte zapochne sega!
+CANNOT_SUICIDE = Nemojesh da se samoubiesh v tozi sarvar 
+INFO_1 = Volley Ball Mod napraven ot tuty@mapping.ro
+INFO_2 = Tova e prosto voleybol. Vseki znae kak se igrae 
+INFO_3 = Kogato runda zapochne, shte izbere sluchaen igrach i shte pusne topkata nad glavata mu
+INFO_4 = Naatiskaiki SPACE kogato topkata idva kam teb i zadurjaiki agala na mernika kum protivnikoviq teren, topkata shte varvi tam kudeto ti e nasochen mernika
+INFO_5 = Kogato otbor udari topkata i tq se udari v protivnikoviq teren shte imat 1 frag + 1 tochka otboren rezultat
+INFO_6 = Komandi za chata:
+INFO_7 = - /help - shte otvori conzolata s info za igrata
+INFO_8 = - /reset - restartira macha [samo admini]
+
+//French
+[fr]
+
+FILE_LOADED = Le fichier^"%s^" a ete charger avec succes!
+FILE_NOT_FOUND = Erreur! le fichier ^"%s^" n'a pas ete trouver!
+WILL_HAVE_BALL = ^n%s aura la balle dans ^n[%d] secondes!
+RED_TEAM_SLAY = Terroristes mort!^nCar %s est sur le terrain enemie!
+BLUE_TEAM_SLAY = Ct mort !^nCar %s est sur le terrain enemie!
+RED_TEAM_WIN = Dernier joueur avec la balle: %s!^nTerroriste marque 1 point!
+RED_TEAM_SCORE = Score: Terroriste: %d | CT: %d
+BLUE_TEAM_WIN = Dernier joueur avec la balle: %s!^nCT marque 1 point!
+BLUE_TEAM_SCORE = Score: CT: %d | Terroriste: %d
+WELCOME_MSG1 = Bonjour %s, bienvenue sur %s!
+WELCOME_MSG2 = Se serveur est un mode VolleyBall creer par tuty@mapping.ro!
+HUD_SCOREBOARD = Score Total: %d^nScore Equipe:^nCT: %d | Terro: %d^nTemps restant: %d:%02d^njoueurs: %d/%d
+DONT_HAVE_ACCESS = Tu n'a pas acces a cette commande!
+GAME_WILL_START = Le jeu viens de commencer !
+GAME_WILL = Le jeu commence maintenant!
+CANNOT_SUICIDE = Tu ne peut pas te suicider
+INFO_1 = Mode VolleyBall creer par tuty@mapping.ro
+
+INFO_2 = Cest juste un volley. Everyone know how to play volley
+INFO_3 = Quand le round commence il choisi un joueur pour donner la balle et doit la lancer avec sa tete
+INFO_4 = Quand la balle arrive appuye sur ta touche "sauter" en visan le terrain de l'adversaire afin de l'envoyer de l'autre coter. La balle ira a la derniere possition du viseur.
+INFO_5 = Quand une equipe envoie la balle sur le terrain adversaire il marque 1 point et 1 frag
+INFO_6 = Commandes chat:
+INFO_7 = - /help - ouvrir le fichier d'aide
+INFO_8 = - /reset - recommencer le match [admin uniquement]
+
+[de]
+
+FILE_LOADED = Datei ^"%s^" erfolgreich geladen!
+FILE_NOT_FOUND = Fehler! Datei ^"%s^" nicht gefunden!
+WILL_HAVE_BALL = ^n%s wird den Ball in ^n[%d] Sekunden besitzen!
+RED_TEAM_SLAY = Das rote Team ist gestorben, ^nweil %s im gegnerischen Raum war!
+BLUE_TEAM_SLAY = Das blaue Team ist gestorben, ^nweil %s im gegnerischen Raum war!
+RED_TEAM_WIN = Der letzte Spieler, der den Ball hatte: %s!^nRotes Team gewinnt 1 Punkt!
+RED_TEAM_SCORE = Punkte: Rotes Team: %d | Blaues Team: %d
+BLUE_TEAM_WIN = Der letzte Spieler, der den Ball hatte: %s!^nBlaues Team gewinnt 1 Punkt!
+BLUE_TEAM_SCORE = Punkte: Blaues Team: %d | Rotes Team: %d
+WELCOME_MSG1 = Hi %s, willkommen zu %s! 
+WELCOME_MSG2 = Dieser Server nutzt den VolleyBall Mod von tuty@mapping.ro!
+HUD_SCOREBOARD = Totale Punkte: %d^nTeam Punkte:^nBlau: %d | Rot: %d^nVerbleibende Zeit: %d:%02d^nSpieler: %d/%d
+DONT_HAVE_ACCESS = Du hast keinen Zugriff auf diesen Befehl!
+GAME_WILL_START = Das Spiel startet nun!
+GAME_WILL = Das Spiel startet nun!
+CANNOT_SUICIDE = Du kannst auf diesem Server keinen Selbstmord begehen :)
+INFO_1 = Volley Ball Mod von tuty@mapping.ro
+INFO_2 = Es ist nur volley. Jeder weiss, wie Volley gespielt wird :)
+INFO_3 = Wenn die Runde beginnt, wird ein willkuehrlich ausgewaehlter Spieler den Ball ueber seinem Kopf haben!
+INFO_4 = Druecke LEER, wenn der Ball auf dich zukommt. Halte dein Fadenkreuz in richtung des gegnerischen Raums, und der Ball wird zur position deines Fadenkreuzes fliegen
+INFO_5 = Wenn ein Team den Ball fallenlaesst, bekommen sie einen Frag und einen Punkt fuer ihr Team
+INFO_6 = Chatbefehle:
+INFO_7 = - /help - Oeffnet die Konsole mit Infos ueber diesen Mod!
+INFO_8 = - /reset - Startet das Spiel neu [nur Admins]
+
+[ru]
+
+FILE_LOADED = ???? ^"%s^" ???????? ???????!
+FILE_NOT_FOUND = ??????! ???? ^"%s^" ?? ??????!
+WILL_HAVE_BALL = ^n%s ??????? ??? ?????^n[%d] ??????(?)!
+RED_TEAM_SLAY = ??????? ??????? ??????!^n??? ??? %s ?????!
+BLUE_TEAM_SLAY = ??????? ????? ??????!^n??? ??? %s ?????!
+RED_TEAM_WIN = ????????? ?????, ??????? ?????? ???: %s!^n??????? ??????? ?????????? 1 ????!
+RED_TEAM_SCORE = ????: ??????? ???????: %d | ??????? ?????: %d
+BLUE_TEAM_WIN = ????????? ?????, ??????? ?????? ???: %s!^n??????? ????? ?????????? 1 ????!
+BLUE_TEAM_SCORE = ????: ??????? ?????: %d | ??????? ???????: %d
+WELCOME_MSG1 = ?????? %s, ????? ?????????? ?? %s! 
+WELCOME_MSG2 = ???? ??????? ?????????? VolleyBall Mod ???????? ???????? ????? tuty@mapping.ro!
+HUD_SCOREBOARD = ????? ???-?? ?????: %d^n???? ??????:^n?????: %d | ???????: %d^n????? ?? ????? ?????: %d:%02d^n???????: %d/%d
+DONT_HAVE_ACCESS = ?? ?? ?????? ?????? ? ???? ???????!
+GAME_WILL_START = ???? ???????? ????? ??????!
+GAME_WILL = ???? ???????? ????? ??????!
+CANNOT_SUICIDE = ?? ?? ?????? ????????? ???????????? ?? ?????? ??????? 
+INFO_1 = Volley Ball Mod ?????? tuty@mapping.ro
+INFO_2 = ??? ?????? ????????. ??? ?????, ??? ?????? ? ???????? 
+INFO_3 = ????? ?????????? ?????,???? ???? ??????? ?????? ? ?? ????? ?????? ???????? ???,???????? ?????,?? ????? ?????? ??????
+INFO_4 = ??????? ??????? ?????? ????? ?????? ??????,? ???????? ?????? ? ?? ????? ???? ?????? ??? ??????
+INFO_5 = ???? ??????? ??????? ????? ? ???? ?????,?? ??????? ???????? ????? ????????? 1 ???? ? 1 ???? ??????? ????? ???????
+INFO_6 = ??????? ????:
+INFO_7 = - /help - ????? ??????? ??????? ? ??????????? ? ???? ????!
+INFO_8 = - /reset - ??????????? ????? [?????? ??? ???????]
