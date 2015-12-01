@@ -14,25 +14,25 @@
 	Boston, MA 02111-1307, USA.
 */
 
-#include <amxmodx>
-#include <fakemeta>
-#include <fakemeta_util>
+#include < amxmodx >
 
+#include < fakemeta >
+#include < fakemeta_util >
 
+#define PLUGIN_VERSION		"3.3"
 
-/* --| Plugin information */
-#define PLUGIN 		"Healthkit on dead body"
-#define AUTHOR 		"tuty"
-#define VERSION 	"3.2b"
+#define FFADE_IN 		0x0000
 
-/* --| Some plugin defines */
-#define MEDKIT_MINSZ 	Float:{ -23.160000, -13.660000, -0.050000 }
-#define MEDKIT_MAXSZ 	Float:{ 11.470000, 12.780000, 6.720000 }
-#define MODEL_KIT 	"models/w_medkit.mdl"
-#define SOUND_KIT 	"items/smallmedkit1.wav" 
-#define FFADE_IN 	0x0000
+enum _: iCoords
+{
+	x = 0,
+	y,
+	z
+};
+		
+new const szModelKit[ ] = "models/w_medkit.mdl";
+new const szPickupSound[ ] = "items/smallmedkit1.wav";
 
-/* --| Some globals... */
 new gToggleKitEnable;
 new gToggleGlowShow;
 new gGMsgFade;
@@ -42,23 +42,17 @@ new gKitHealthCvar;
 new gLimitHealthCvar;
 new gGMsgItemPickup;
 
-/* --| Medkit classname */
-new const gMedKitClassname[] = "medkit_entity";
+new const gMedKitClassname[ ] = "medkit_entity";
 
-/* --| Let's start the plugin */
-public plugin_init()
+public plugin_init( )
 {
-	/* --| Registering the plugin to show it on plugins list */
-	register_plugin( PLUGIN, VERSION, AUTHOR );
+	register_plugin( "Healthkit on dead body", PLUGIN_VERSION, "tuty" );
     	
-	/* --| Some usefull events */
-        register_event( "DeathMsg","drop_kit","a" );
-        register_logevent( "logevent_round_start", 2, "1=Round_Start" );
+        register_event( "DeathMsg","Event_DeathMsg","a" );
+        register_logevent( "LOGEvent_Round_Start", 2, "1=Round_Start" );
 	
-	/* --| Register the touch forward */
-        register_forward( FM_Touch,"ForwardTouch" );
+        register_forward( FM_Touch, "forward_FM_Touch" );
 	
-	/* --| Cvar list */
         gToggleKitEnable = register_cvar( "kit_enable", "1" );
         gToggleGlowShow = register_cvar( "kit_glow", "1" );
         gToggleFadeEnable = register_cvar( "kit_fade", "1" );
@@ -66,112 +60,90 @@ public plugin_init()
         gKitHealthCvar = register_cvar( "kit_health", "20" );
         gLimitHealthCvar = register_cvar( "kit_limit_health", "100" );
 	
-	/* --| Let's catch the user message id's */
 	gGMsgFade = get_user_msgid( "ScreenFade" );
         gGMsgItemPickup = get_user_msgid( "ItemPickup" );
 }
-
-/* --| Precaching stuff */  
-public plugin_precache()
+ 
+public plugin_precache( )
 {
-	precache_model( MODEL_KIT );
-        precache_sound( SOUND_KIT );
+	precache_model( szModelKit );
+        precache_sound( szPickupSound );
 }
 
-/* --| When player dies, let's drop the kit if plugin is elabled */
-public drop_kit()
+public Event_DeathMsg( )
 {
-	/* --| Check if plugin is enabled/disabled */
 	if( get_pcvar_num( gToggleKitEnable ) == 0 )
         {
 		return PLUGIN_HANDLED;
         }	
 	
-	/* --| Get the victim id */
-        new victim = read_data( 2 );
+        new iVictim = read_data( 2 );
 	
-	/* --| Get the victim origin */
-        static Float:origin[ 3 ];
-        pev( victim, pev_origin, origin );
+        static Float:flOrigin[ iCoords ];
+        pev( iVictim, pev_origin, flOrigin );
 	
-	/* --| Creating healthkit entity */
-        new ent = engfunc( EngFunc_CreateNamedEntity, engfunc( EngFunc_AllocString, "info_target" ) );
+        new iEnt = engfunc( EngFunc_CreateNamedEntity, engfunc( EngFunc_AllocString, "info_target" ) );
 	
 	/* --| Modify the origin a little bit. This is calculated to be set on floor */
-        origin[ 2 ] -= 36; 
+        flOrigin[ z ] -= 36; 
 	
-	/* --| Setting the ent origin */
-        engfunc( EngFunc_SetOrigin, ent, origin );
+        engfunc( EngFunc_SetOrigin, iEnt, flOrigin );
 	
-	/* --| Check if isn't a valid ent */
-        if( !pev_valid( ent ) )
+        if( !pev_valid( iEnt ) )
         {
 		return PLUGIN_HANDLED;
         }
 	
-	/* --| Now let's set the entity model and some stuff */
-        set_pev( ent, pev_classname, gMedKitClassname );
-        engfunc( EngFunc_SetModel, ent, MODEL_KIT );
-        dllfunc( DLLFunc_Spawn, ent );
-        set_pev( ent, pev_solid, SOLID_BBOX );
-        set_pev( ent, pev_movetype, MOVETYPE_NONE );
-        engfunc( EngFunc_SetSize, ent, MEDKIT_MINSZ, MEDKIT_MAXSZ );
-        engfunc( EngFunc_DropToFloor, ent );
+        set_pev( iEnt, pev_classname, gMedKitClassname );
+        engfunc( EngFunc_SetModel, iEnt, szModelKit );
+        dllfunc( DLLFunc_Spawn, iEnt );
+        set_pev( iEnt, pev_solid, SOLID_BBOX );
+        set_pev( iEnt, pev_movetype, MOVETYPE_NONE );
+        engfunc( EngFunc_SetSize, iEnt, Float:{ -23.160000, -13.660000, -0.050000 }, Float:{ 11.470000, 12.780000, 6.720000 } );
+        engfunc( EngFunc_DropToFloor, iEnt );
 	
-	/* --| If cvar is set to 1, let's glow the entity */
         if( get_pcvar_num( gToggleGlowShow ) == 1 )
         {
-		fm_set_rendering( ent, kRenderFxGlowShell, 255, 255, 255, kRenderFxNone, 27 );
+		fm_set_rendering( iEnt, kRenderFxGlowShell, 255, 255, 255, kRenderFxNone, 27 );
         }
 	
         return PLUGIN_HANDLED;
 }
 
-/* --| Calling the touch forward from fakemeta to see if player touched the entity */  
-public ForwardTouch( ent, id )
+public forward_FM_Touch( iEnt, id )
 {
-	/* --| Check if is a valid entity and is plugin enabled */
-        if( !pev_valid( ent ) || get_pcvar_num( gToggleKitEnable ) == 0 )
+        if( !pev_valid( iEnt ) 
+	|| get_pcvar_num( gToggleKitEnable ) == 0 )
         {
 		return FMRES_IGNORED;
         }
 	
-	/* --| Find the ent classname */
-        new classname[ 32 ];
-        pev( ent, pev_classname, classname, charsmax( classname ) );
+        new szClassname[ 32 ];
+        pev( iEnt, pev_classname, szClassname, charsmax( szClassname ) );
 	
-	/* --| Check if isn't our classname */
-        if( !equal( classname, gMedKitClassname ) )
+        if( !equal( szClassname, gMedKitClassname ) )
         {
 		return FMRES_IGNORED;
         }
 	
-	/* --| Get the user health, and check some cvars */
-        new health = get_user_health( id );
-        new cvarhealth = get_pcvar_num( gKitHealthCvar );
-        new maxhealth = get_pcvar_num( gLimitHealthCvar );
-	
-	/* --| Check player health */
-        if( health >= maxhealth )
+        new iUserHealth = get_user_health( id );
+
+        new iCvarHealth = get_pcvar_num( gKitHealthCvar );
+        new iMaxHealth = get_pcvar_num( gLimitHealthCvar );
+
+        if( iUserHealth >= iMaxHealth )
         {
-		client_print( id, print_center, "Sorry, your health is %d. You can't take the kit! You must have less then %d to take it.", health, maxhealth ); 
 		return FMRES_IGNORED;
         }
 
-	/* --| Show a red hud message to client */
         set_hudmessage( 255, 0, 0, -1.0, 0.83, 2, 6.0, 3.0 );
-        show_hudmessage( id, "You received %d HP", cvarhealth );
+        show_hudmessage( id, "You received %d HP", iCvarHealth );
 	
-	/* Set the health and show some minor things, for fun */
-        fm_set_user_health( id, health + cvarhealth );
-        emit_sound( id, CHAN_ITEM, SOUND_KIT, VOL_NORM, ATTN_NORM ,0 , PITCH_NORM );
-        
-	/* --| Show the healthkit item on hud */
-        message_begin( MSG_ONE_UNRELIABLE, gGMsgItemPickup, _, id );
-        write_string( "item_healthkit" );
-        message_end();
+        fm_set_user_health( id, iUserHealth + iCvarHealth );
 
-	/* --| If cvar for fade is enabled, let's create the fade */
+        emit_sound( id, CHAN_ITEM, szPickupSound, VOL_NORM, ATTN_NORM, 0 , PITCH_NORM );
+        UTIL_Send_PickupMessage( id, "item_healthkit" );
+        
         if( get_pcvar_num( gToggleFadeEnable ) == 1 )
         {
 		message_begin( MSG_ONE_UNRELIABLE, gGMsgFade , _, id );
@@ -182,27 +154,30 @@ public ForwardTouch( ent, id )
 		write_byte( 0 );
 		write_byte( 0 ); 
 		write_byte( 75 );
-		message_end();
+		message_end( );
         }
 	
-	/* --| Now we need to remove the entity from floor */
-        engfunc( EngFunc_RemoveEntity, ent );
+        engfunc( EngFunc_RemoveEntity, iEnt );
 
         return FMRES_IGNORED;
 }
 
-/* --| Round start, we need to check entity and remove it */
-public logevent_round_start()
+public LOGEvent_Round_Start( )
 {
-	/* --| If cvar to remove ent on round start is enabled, let's remove the ent */
         if( get_pcvar_num( gToggleRemoveAtRstart ) == 1 )
         {
-		new hkit = FM_NULLENT;
-		while( ( hkit = fm_find_ent_by_class( hkit, gMedKitClassname ) ) )
+		new iEntity = FM_NULLENT;
+
+		while( ( iEntity = fm_find_ent_by_class( iEntity, gMedKitClassname ) ) )
 		{
-			engfunc( EngFunc_RemoveEntity, hkit );
+			engfunc( EngFunc_RemoveEntity, iEntity );
 		}
 	}	
 }
 
-/* --| End of plugin */
+stock UTIL_Send_PickupMessage( const id, const szItemName[ ] )
+{
+	message_begin( MSG_ONE_UNRELIABLE, gGMsgItemPickup, _, id );
+        write_string( szItemName );
+        message_end( );
+}
