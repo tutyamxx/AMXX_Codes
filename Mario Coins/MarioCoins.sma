@@ -30,6 +30,7 @@ new gCvarPluginRespawnTime;
 new gCvarPluginCoinPerBody;
 new gCvarPluginCoinGlow;
 new gHudSyncronizer;
+new gHudSyncronizer2;
 
 new const gCoinClassname[ ] = "MarioCoin$";
 
@@ -58,6 +59,7 @@ public plugin_init( )
 	gCvarPluginCoinGlow = register_cvar( "mc_glowcoin", "1" );
 	
 	gHudSyncronizer = CreateHudSyncObj( );
+	gHudSyncronizer2 = CreateHudSyncObj( );
 }
 
 public plugin_precache( )
@@ -103,7 +105,7 @@ public Hook_DeathMessage( )
 		new iRespawnTime = get_pcvar_num( gCvarPluginRespawnTime );
 
 		set_hudmessage( 255, 255, 0, 0.08, 0.78, 0, 6.0, 4.0 );
-		ShowSyncHudMsg( iVictim, gHudSyncronizer, "You will respawn in %d second%s!", iRespawnTime, iRespawnTime == 1 ? "" : "s" );
+		ShowSyncHudMsg( iVictim, gHudSyncronizer2, "You will respawn in %d second%s!", iRespawnTime, iRespawnTime == 1 ? "" : "s" );
 
 		set_task( float( iRespawnTime ), "RespawnPlayerAndResetCoins", iVictim );
 	}
@@ -173,7 +175,7 @@ public Forward_TouchCoin( iEntity, id )
 
 		else if( ++bCountTokenCoins[ id ] >= iMaxCoins )
 		{
-			ShowSyncHudMsg( id, gHudSyncronizer, "You have 1 UP [%d/%d Coins]!^nAfter death, you will respawn!", bCountTokenCoins[ id ], iMaxCoins );
+			ShowSyncHudMsg( id, gHudSyncronizer2, "You have 1 UP [%d/%d Coins]!^nAfter death, you will respawn!", bCountTokenCoins[ id ], iMaxCoins );
 			emit_sound( id, CHAN_ITEM, gLifeGained, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 			
 			set_pev( iEntity, pev_flags, FL_KILLME );
@@ -182,7 +184,7 @@ public Forward_TouchCoin( iEntity, id )
 		
 		new iGainCoins = get_pcvar_num( gCvarPluginCoinPerBody );	
 
-		ShowSyncHudMsg( id, gHudSyncronizer, "You got %d coin%s from this body!", iGainCoins, iGainCoins == 1 ? "" : "s" );
+		ShowSyncHudMsg( id, gHudSyncronizer2, "You got %d coin%s from this body!", iGainCoins, iGainCoins == 1 ? "" : "s" );
 		emit_sound( id, CHAN_ITEM, gCoinGained, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 
 		set_pev( iEntity, pev_flags, FL_KILLME );
@@ -225,7 +227,7 @@ public RespawnPlayerAndResetCoins( iVictim )
 	if( !is_user_alive( iVictim ) && cs_get_user_team( iVictim ) != CS_TEAM_SPECTATOR )
 	{
 		set_hudmessage( 255, 255, 0, 0.08, 0.78, 0, 6.0, 4.0 );
-		ShowSyncHudMsg( iVictim, gHudSyncronizer, "You used 1 UP! Go go go!" );
+		ShowSyncHudMsg( iVictim, gHudSyncronizer2, "You used 1 UP! Go go go!" );
 
 		ExecuteHamB( Ham_CS_RoundRespawn, iVictim );
 		emit_sound( iVictim, CHAN_ITEM, gRespawned, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
