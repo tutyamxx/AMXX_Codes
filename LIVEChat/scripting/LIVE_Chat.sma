@@ -1,4 +1,4 @@
-/*	CopyRight © 2010, tuty
+/*	CopyRight © 2015, tuty
 
 	LIVE Chat is free software;
 	you can redistribute it and/or modify it under the terms of the
@@ -19,16 +19,15 @@
 
 #include < amxmodx >
 #include < amxmisc >
+
 #include < sqlx >
 
 #pragma semicolon 1
 
-#define PLUGIN_VERSION	"1.0.0"
+#define PLUGIN_VERSION	"1.0.3"
 
-#define SCRIPT_NAME	"LIVEChat"
-#define CFG_NUMEFISIER	"LIVEChat.cfg"
-
-#define DEBUG_PLUGIN
+new const gDbTableName[ ] = "LIVEChat";
+new const gConfigFileName[ ] = "LIVEChat.cfg";
 
 new Handle:gSqlTuple;
 new Handle:gSqlConnection;
@@ -38,23 +37,17 @@ new gCvarPointerUser;
 new gCvarPointerPass;
 new gCvarPointerDb;
 
-public plugin_init()
+public plugin_init( )
 {
-	register_plugin( "LIVE CS Chat", PLUGIN_VERSION, "tuty" );
+	register_plugin( "LIVE CS 1.6 Chat", PLUGIN_VERSION, "tuty" );
 
-	#if defined DEBUG_PLUGIN
-		server_print( "[LiveChat] Plugin started..." );
-		log_amx( "[LiveChat] Plugin started..." );
-	#endif
-
-	register_clcmd( "say", "checkCommandSay" );
-	register_clcmd( "say_team", "checkCommandSay" );
+	register_clcmd( "say", "check_CommandSay" );
+	register_clcmd( "say_team", "check_CommandSay" );
 
 	gCvarPointerHost = register_cvar( "livechat_host", "" );
 	gCvarPointerUser = register_cvar( "livechat_user", "" );
 	gCvarPointerPass = register_cvar( "livechat_pass", "" );
 	gCvarPointerDb = register_cvar( "livechat_db", "" );
-
 
 	new iSqlHost[ 64 ], iSqlUser[ 64 ], iSqlPass[ 64 ], iSqlDb[ 64 ];
 	
@@ -70,53 +63,45 @@ public plugin_init()
 	
 	if( gSqlConnection != Empty_Handle )
 	{
-		SQL_QueryAndIgnore( gSqlConnection, "CREATE TABLE IF NOT EXISTS `%s`(`id` int(11) NOT NULL auto_increment, `time` time NOT NULL default '00:00:00', `alive` varchar(50) NOT NULL default '', `team` int(50) NOT NULL default '0', `name` varchar(100) NOT NULL, `message` text NOT NULL, PRIMARY KEY (`id`) );", SCRIPT_NAME );
+		SQL_QueryAndIgnore( gSqlConnection, "CREATE TABLE IF NOT EXISTS `%s`(`id` int(11) NOT NULL auto_increment, `time` time NOT NULL default '00:00:00', `alive` varchar(50) NOT NULL default '', `team` int(50) NOT NULL default '0', `name` varchar(100) NOT NULL, `message` text NOT NULL, PRIMARY KEY (`id`) );", gDbTableName );
 		SQL_FreeHandle( gSqlConnection );
 		
-		#if defined DEBUG_PLUGIN
-			server_print( "[LiveChat] Connected successfuly!" );
-			log_amx( "[LiveChat] Connected successfuly!" );
-		#endif
+		server_print( "[LiveChat] Connected successfuly!" );
+		log_amx( "[LiveChat] Connected successfuly!" );
 	}
 	
 	else
 	{
-		#if defined DEBUG_PLUGIN
-			server_print( "[LiveChat] SQLx error (#%d) -=> [%s]", iError, szError );
-			log_amx( "[LiveChat] SQLx error (#%d) -=> [%s]", iError, szError );
-		#endif
+		server_print( "[LiveChat] SQLx error (#%d) -=> [%s]", iError, szError );
+		log_amx( "[LiveChat] SQLx error (#%d) -=> [%s]", iError, szError );
 	}
 }
 
-public plugin_cfg()
+public plugin_cfg( )
 {
 	new szConfigsDir[ 32 ], szFile[ 192 ];
 	
 	get_configsdir( szConfigsDir, charsmax( szConfigsDir ) );
-	formatex( szFile, charsmax( szFile ), "%s/%s", szConfigsDir, CFG_NUMEFISIER );
+	formatex( szFile, charsmax( szFile ), "%s/%s", szConfigsDir, gConfigFileName );
 	
 	if( file_exists( szFile ) )
 	{
 		server_cmd( "exec %s", szFile );
 		
-		#if defined DEBUG_PLUGIN
-			server_print( "[LiveChat] File ^"%s^" found!", szFile );
-			log_amx( "[LiveChat] File ^"%s^" found!", szFile );
-		#endif
+		server_print( "[LiveChat] File ^"%s^" found!", szFile );
+		log_amx( "[LiveChat] File ^"%s^" found!", szFile );
 	}
 	
 	else
 	{
-		#if defined DEBUG_PLUGIN
-			server_print( "[LiveChat] Warning! File ^"%s^" not found!", szFile );
-			log_amx( "[LiveChat] Warning! File ^"%s^" not found!", szFile );
-		#endif
+		server_print( "[LiveChat] Warning! File ^"%s^" not found!", szFile );
+		log_amx( "[LiveChat] Warning! File ^"%s^" not found!", szFile );
 	}
 }
 
-public checkCommandSay( id )
+public check_CommandSay( id )
 {
-	if( is_user_bot( id ) || !is_user_connected( id ) )
+	if( !is_user_connected( id ) )
 	{
 		return PLUGIN_HANDLED;
 	}
@@ -135,48 +120,44 @@ public checkCommandSay( id )
 	get_user_name( id, szName, charsmax( szName ) );
 	get_time( "%H:%M:%S", szTime, charsmax( szTime ) );
 
-	formatex( szQuery, charsmax( szQuery ), "INSERT INTO `%s` (time, alive, team, name, message) values ('%s', '%s', '%d', '%s', '%s')", SCRIPT_NAME, szTime, is_user_alive( id ) ? "*ALIVE*" : "*DEAD*", get_user_team( id ), szName, szSaid );
+	formatex( szQuery, charsmax( szQuery ), "INSERT INTO `%s` (time, alive, team, name, message) values ('%s', '%s', '%d', '%s', '%s')", gDbTableName, szTime, is_user_alive( id ) ? "*ALIVE*" : "*DEAD*", get_user_team( id ), szName, szSaid );
 	SQL_ThreadQuery( gSqlTuple, "QueryHandle", szQuery );
 	
 	return PLUGIN_CONTINUE;
 }
 
-public QueryHandle( iFailState, Handle:hQuery, szError[], iErrnum, iData[], iSize, Float:fQueueTime )
+public QueryHandle( iFailState, Handle:hQuery, szError[ ], iErrnum, iData[ ], iSize, Float:fQueueTime )
 {
 	if( iFailState != TQUERY_SUCCESS )
 	{
-		#if defined DEBUG_PLUGIN
-			server_print( "[LiveChat] SQLx error (#%d) -=> [%s]", iErrnum, szError );
-			log_amx( "[LiveChat] SQLx error (#%d) -=> [%s]", iErrnum, szError );
-		#endif
+		server_print( "[LiveChat] SQLx error (#%d) -=> [%s]", iErrnum, szError );
+		log_amx( "[LiveChat] SQLx error (#%d) -=> [%s]", iErrnum, szError );
 	}
 }
 	
-public plugin_end()
+public plugin_end( )
 {
 	if( gSqlTuple )
 	{
 		SQL_FreeHandle( gSqlTuple  );
 		
-		#if defined DEBUG_PLUGIN
-			server_print( "[LiveChat] Connection closed!" );
-			log_amx( "[LiveChat] Connection closed!" );
-		#endif
+		server_print( "[LiveChat] Connection closed!" );
+		log_amx( "[LiveChat] Connection closed!" );
 	}
 }
 
-stock bool:is_valid_message( const said[] )
+stock bool:is_valid_message( const szSaid[ ] )
 {
-	new len = strlen( said );
+	new iLen = strlen( szSaid );
 
-	if( !len )	
+	if( !iLen )	
 	{
 		return false;
 	}
 	
-	for( new i = 0; i < len; i++ )
+	for( new i = 0; i < iLen; i++ )
 	{
-		if( said[ i ] != ' ' || said[ i ] != '%' )
+		if( szSaid[ i ] != ' ' || szSaid[ i ] != '%' )
 		{
 			return true;
 		}
