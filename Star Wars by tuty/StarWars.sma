@@ -85,23 +85,23 @@ new const gEvilCharacterNames[ iBadCharacters ][ ] =
 
 new const gEvilCharactersAbi[ iBadCharacters ][ ] =
 {
-	"Gravitatie Scazuta + Teleport(Tasta T)",
-	"-10 HP/s Doar uitandu-te la inamic",
-	"Viteza scazuta + 250 Viata",
-	"Jetpack (Tasta SPACE)",
-	"350 Armura + Tracer la fiecare arma"
+	"Low Gravity + Teleport(T Key)",
+	"-10 HP/s just by looking at enemy",
+	"Low Speed + 250 Hp",
+	"Jetpack (SPACE Key)",
+	"350 Armor + Weapon Tracers"
 };
 
 new const gGoodCharactersAbi[ iGoodCharacters ][ ] =
 {
-	"Stii cand se apropie un inamic",
-	"Tot la 3s esti: Holograma/Invizibil",
-	"Gravitatie Scazuta + 1 HP/s + 15s Force Shield(Tasta T)",
-	"75 Viata + Viteza Mare",
-	"Viteza Scazuta + 250 Viata"
+	"You know when an enemy is nearby",
+	"Every 3 seconds: Hologram/Invisible",
+	"Low Gravity + 1 HP/s + 15s Force Shield(T Key)",
+	"75 HP + High Speed",
+	"Low Speed + 250 Health"
 };
 
-new const gTag[ ] = "[FUN WD]";
+new const gTag[ ] = "[tuty's Respawn]";
 
 new const gTeleportSound[ ] = "plats/squeekstop1.wav";
 new const gJetpackSound[ ] = "ambience/flameburst1.wav";
@@ -190,7 +190,7 @@ public bacon_PlayerSpawn( id )
 				new iCharacter = bPlayerCharacter[ id ][ 0 ];
 
 				UTIL_ClearChat( id );
-				ColorChat( id, RED, "^3%s^1 Acum esti eroul^4 %s^1. Abilitate:^4 %s", gTag, gEvilCharacterNames[ iCharacter ], gEvilCharactersAbi[ iCharacter ] );
+				ColorChat( id, RED, "^3%s^1 Now you are:l^4 %s^1. Ability:^4 %s", gTag, gEvilCharacterNames[ iCharacter ], gEvilCharactersAbi[ iCharacter ] );
 			}
 
 			case 2:
@@ -201,7 +201,7 @@ public bacon_PlayerSpawn( id )
 				new iCharacter2 = bPlayerCharacter[ id ][ 1 ];
 				
 				UTIL_ClearChat( id );
-				ColorChat( id, RED, "^3%s^1 Acum esti eroul^4 %s^1. Abilitate:^4 %s", gTag, gGoodCharacterNames[ iCharacter2 ], gGoodCharactersAbi[ iCharacter2 ] );
+				ColorChat( id, RED, "^3%s^1 Now you are^4 %s^1. Ability:^4 %s", gTag, gGoodCharacterNames[ iCharacter2 ], gGoodCharactersAbi[ iCharacter2 ] );
 			}
 		}
 		
@@ -423,7 +423,7 @@ public forward_Spray( id )
 
 			if( flGameTime - flLastTeleport[ id ] < MAULT_TELEPORTDELAY )
 			{
-				ShowSyncHudMsg( id, gHudSync, "Teleportul nu este incarcat!^nAsteapta %d secunde!", floatround( flLastTeleport[ id ] + MAULT_TELEPORTDELAY - flGameTime + 1 ) );
+				ShowSyncHudMsg( id, gHudSync, "Teleport not ready!^nWait %d seconds!", floatround( flLastTeleport[ id ] + MAULT_TELEPORTDELAY - flGameTime + 1 ) );
 			
 				return PLUGIN_HANDLED;
 			}
@@ -451,7 +451,7 @@ public forward_Spray( id )
 
 			if( iTarget == 0 )
 			{
-				ShowSyncHudMsg( id, gHudSync, "Nu a fost gasit niciun inamic!" );
+				ShowSyncHudMsg( id, gHudSync, "No enemy found!" );
 			
 				return PLUGIN_HANDLED;
 			}
@@ -461,7 +461,7 @@ public forward_Spray( id )
 		
 			iCurrentOrigin[ 2 ] += 80;
 		
-			ShowSyncHudMsg( id, gHudSync, "Ai fost teleportat pe cel mai apropiat inamic!^nOrigini: X: %d | Y:%d | Z:%d", iCurrentOrigin[ 0 ], iCurrentOrigin[ 1 ], iCurrentOrigin[ 2 ] );
+			ShowSyncHudMsg( id, gHudSync, "You have been teleported on an enemy head!^nOrigins: X: %d | Y:%d | Z:%d", iCurrentOrigin[ 0 ], iCurrentOrigin[ 1 ], iCurrentOrigin[ 2 ] );
 			set_user_origin( id, iCurrentOrigin );
 			emit_sound( id, CHAN_BODY, gTeleportSound, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 			UTIL_Teleport( iCurrentOrigin );
@@ -477,14 +477,14 @@ public forward_Spray( id )
 
 			if( bYodaShield[ id ] == 1 )
 			{
-				ShowSyncHudMsg( id, gHudSync, "Scutul Yoda este deja activ!" );
+				ShowSyncHudMsg( id, gHudSync, "Yoda Shield is already active!" );
 				
 				return PLUGIN_HANDLED;
 			}
 
 			if( flGameTime - flLastShield[ id ] < YODA_FORCESHIELD_DELAY )
 			{
-				ShowSyncHudMsg( id, gHudSync, "Poti sa folosesti Scutul Yoda dupa %d secunde!", floatround( flLastShield[ id ] + YODA_FORCESHIELD_DELAY - flGameTime + 1 ) );
+				ShowSyncHudMsg( id, gHudSync, "You can use Yoda Shield after %d seconds!", floatround( flLastShield[ id ] + YODA_FORCESHIELD_DELAY - flGameTime + 1 ) );
 	
 				return PLUGIN_HANDLED;
 			}
@@ -492,7 +492,7 @@ public forward_Spray( id )
 			bYodaShield[ id ] = 1;
 
 			set_task( YODA_FORCESHIELDTIME, "RemoveYodaShield", id + TASK_YODA );
-			ShowSyncHudMsg( id, gHudSync, "Ai activat Scutul Yoda!^nNu vei mai primi daune timp de %d secunde!", floatround( YODA_FORCESHIELDTIME ) );
+			ShowSyncHudMsg( id, gHudSync, "You have activated Yoda Shield!^nYou won't take any damage for %d seconds!", floatround( YODA_FORCESHIELDTIME ) );
 			emit_sound( id, CHAN_STATIC, gYodaShieldSound, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 		}
 		
@@ -513,7 +513,7 @@ public RemoveYodaShield( iTaskid )
 		bYodaShield[ id ] = 0;
 		flLastShield[ id ] = flGameTime;
 
-		ShowSyncHudMsg( id, gHudSync, "Scutul Yoda este acum dezactivat!" );
+		ShowSyncHudMsg( id, gHudSync, "Yoda Shield is now disabled!" );
 		emit_sound( id, CHAN_STATIC, gYodaShieldSound, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 	}
 }
@@ -594,7 +594,7 @@ public bacon_PreThink( id )
 							if( flGameTime - flLastNear[ id ] >= 4.0 )
 							{
 								client_cmd( id, "speak ^"%s^"", gLukeSound );
-								engclient_print( id, engprint_center, "Un inamic este aproape de tine!^nUn inamic este aproape de tine!" );
+								engclient_print( id, engprint_center, "An enemy is near you!^nAn enemy is near you!" );
 							
 								flLastNear[ id ] = flGameTime;
 							}
