@@ -78,20 +78,12 @@ public EVENT_DeathMsg( )
 UTIL_Fade( id, iRed, iGreen, iBlue )
 {
 	message_begin( MSG_ONE_UNRELIABLE, gMessageScreenFade, _, id );
-	
-write_short( 1 << 10 )
-;
-	
-write_short( 1 << 10 )
-;
-	write_short( FFADE_IN )
-;
-	write_byte( iRed )
-;
+	write_short( 1 << 10 );
+	write_short( 1 << 10 );
+	write_short( FFADE_IN );
+	write_byte( iRed );
 	write_byte( iGreen );
-	write_byte( iBlue )
-;
-	write_byte( 75 )
-;
+	write_byte( iBlue );
+	write_byte( 75 );
 	message_end( );
 }
