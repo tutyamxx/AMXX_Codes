@@ -8,10 +8,10 @@
 
 #pragma semicolon 1
 
-#define PLUGIN_VERSION		"2.0.5"
+#define PLUGIN_VERSION		"2.0.6"
 
 #if AMXX_VERSION_NUM < 183
-#define MAX_PLAYERS		32
+	#define MAX_PLAYERS		32
 #endif
 
 #define __HUD_MAXTIME		1.0
@@ -31,8 +31,6 @@ enum _: iTaskIds ( += 128763 )
 	__TASKID_RESPAWN_PLAYER
 };
 
-new bCountTokenCoins[ MAX_PLAYERS + 1 ];
-
 new gCvarPluginEnable;
 new gCvarPluginMaxCoinsForLife;
 new gCvarPluginRespawnTime;
@@ -47,9 +45,12 @@ new i;
 new const gCoinClassname[ ] = "MarioCoin$";
 
 new const gCoinModel[ ] = "models/MarioCoins/mario_coin.mdl";
+
 new const gCoinGained[ ] = "MarioCoins/coingained.wav";
 new const gLifeGained[ ] = "MarioCoins/lifegained.wav";
 new const gRespawned[ ] = "MarioCoins/respawned.wav";
+
+new bCountTokenCoins[ MAX_PLAYERS + 1 ];
 
 public plugin_init( )
 {
@@ -142,8 +143,6 @@ public Hook_DeathMessage( )
 
 	new iKiller = read_data( 1 );
 	new iVictim = read_data( 2 );
-	
-	remove_task( iVictim + __TASKID_HUD_REFRESH );
 
 	if( iKiller == iVictim )
 	{
@@ -173,9 +172,10 @@ public Hook_DeathMessage( )
 	}
 	
 	engfunc( EngFunc_SetOrigin, iEntity, flPlayerOrigin );
-
 	set_pev( iEntity, pev_classname, gCoinClassname );
+
 	engfunc( EngFunc_SetModel, iEntity, gCoinModel );
+
 	set_pev( iEntity, pev_solid, SOLID_SLIDEBOX );
 	set_pev( iEntity, pev_movetype, MOVETYPE_NONE );
 	set_pev( iEntity, pev_framerate, 1.0 );
@@ -183,6 +183,7 @@ public Hook_DeathMessage( )
 
 	engfunc( EngFunc_SetSize, iEntity, Float:{ -10.0, -10.0, -10.0 }, Float:{ 10.0, 10.0, 10.0 } );
 	engfunc( EngFunc_DropToFloor, iEntity );
+
 	set_pev( iEntity, pev_nextthink, get_gametime( ) + 1.0 );
 	
 	if( get_pcvar_num( gCvarPluginCoinGlow ) == 1 )
@@ -214,34 +215,37 @@ public Forward_TouchCoin( iEntity, id )
 		set_hudmessage( 255, 255, 0, 0.08, 0.78, 0, 6.0, 4.0 );
 
 		new iMaxCoins = get_pcvar_num( gCvarPluginMaxCoinsForLife );
+		new iGainCoins = get_pcvar_num( gCvarPluginCoinPerBody );
 
-		/* --| Hamlet, this "useless" code, prevents displaying You have 1 UP [10/5] coins values.
-		   --| I know it looks weird but if you actually test the plugin, IT DOES HAVE A MEANING
-		   --| When i made this plugin i checked every single logic and bug fix. PLEASE  */
-
-		if( bCountTokenCoins[ id ] == iMaxCoins )
+		bCountTokenCoins[ id ] += iGainCoins;
+		
+		if( bCountTokenCoins[ id ] > iMaxCoins )
 		{
-			set_pev( iEntity, pev_flags, FL_KILLME );
+			// --| Example:
+			// --| If player somehow has 3 coins, and the iGainCoins cvar is set to 2, will receive +2
+			// --| so, that would be 5. instead of displaying 5/iMaxCoins( which is 4 atm ) will look ugly and unprofessional 5/4 coins.
+			// --| so, just in case that the value is higher, will set it to maximum
 			bCountTokenCoins[ id ] = iMaxCoins;
-
-			return PLUGIN_CONTINUE;
+			
+			emit_sound( id, CHAN_ITEM, gCoinGained, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
+			set_pev( iEntity, pev_flags, FL_KILLME );
 		}
 
-		else if( ++bCountTokenCoins[ id ] >= iMaxCoins )
+		else if( bCountTokenCoins[ id ] == iMaxCoins )
 		{
 			ShowSyncHudMsg( id, gHudSyncronizer2, "You have 1 UP [%d/%d Coins]!^nAfter death, you will respawn!", bCountTokenCoins[ id ], iMaxCoins );
-			emit_sound( id, CHAN_ITEM, gLifeGained, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 			
+			emit_sound( id, CHAN_ITEM, gLifeGained, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 			set_pev( iEntity, pev_flags, FL_KILLME );
-			return PLUGIN_CONTINUE;
 		}
-		
-		new iGainCoins = get_pcvar_num( gCvarPluginCoinPerBody );	
-
-		ShowSyncHudMsg( id, gHudSyncronizer2, "You got %d coin%s from this body!", iGainCoins, iGainCoins == 1 ? "" : "s" );
-		emit_sound( id, CHAN_ITEM, gCoinGained, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
-
-		set_pev( iEntity, pev_flags, FL_KILLME );
+	
+		else
+		{
+			ShowSyncHudMsg( id, gHudSyncronizer2, "You got %d coin%s from this body!", iGainCoins, iGainCoins == 1 ? "" : "s" );
+			
+			emit_sound( id, CHAN_ITEM, gCoinGained, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
+			set_pev( iEntity, pev_flags, FL_KILLME );
+		}
 	}
 	
 	return PLUGIN_CONTINUE;
@@ -249,8 +253,8 @@ public Forward_TouchCoin( iEntity, id )
 
 public DisplayMarioCoinsHud( )
 {
-	new iPlayers[ MAX_PLAYERS ]; 
 	new iPlayerCount, iPlayerId;
+	new iPlayers[ MAX_PLAYERS ], szFormatHUDMessage[ 192 ];
 
 	get_players( iPlayers, iPlayerCount, "ac" );
 	
@@ -259,8 +263,7 @@ public DisplayMarioCoinsHud( )
    		iPlayerId = iPlayers[ i ];
 
 		set_hudmessage( 255, 127, 42, 0.0, 0.90, 0, 6.0, __HUD_MAXTIME + 0.1 );
-			
-		new szFormatHUDMessage[ 192 ];
+
 		new iMaxCoins = get_pcvar_num( gCvarPluginMaxCoinsForLife );
 
 		if( bCountTokenCoins[ iPlayerId ] >= iMaxCoins )
@@ -289,7 +292,7 @@ public RespawnPlayerAndResetCoins( iTaskid )
 		ShowSyncHudMsg( iVictim, gHudSyncronizer2, "You used 1 UP! Go go go!" );
 
 		ExecuteHamB( Ham_CS_RoundRespawn, iVictim );
-		emit_sound( iVictim, CHAN_STATIC, gRespawned, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
+		emit_sound( iVictim, CHAN_AUTO, gRespawned, VOL_NORM, ATTN_NORM, 0, PITCH_NORM );
 		
 		bCountTokenCoins[ iVictim ] = 0;
 		
@@ -299,7 +302,7 @@ public RespawnPlayerAndResetCoins( iTaskid )
 
 stock UTIL_DynamicLight( Float:flOrigin[ 3 ], r, g, b, a )
 {
-	engfunc( EngFunc_MessageBegin, MSG_BROADCAST, SVC_TEMPENTITY, flOrigin );
+	engfunc( EngFunc_MessageBegin, MSG_PVS, SVC_TEMPENTITY, flOrigin );
 	write_byte( TE_DLIGHT );
 	engfunc( EngFunc_WriteCoord, flOrigin[ 0 ] );
 	engfunc( EngFunc_WriteCoord, flOrigin[ 1 ] );
