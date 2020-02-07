@@ -1,4 +1,4 @@
-# AMXX_Codes
+# Amx Mod X (AMXX) Plugins
 
 * 🐠 All my Amx Mod X Plugins that I've made in my life + some unreleased private big plugins
 * Plugins are game mods such as Counter-Strike 1.6, Half-Life 1 and ESF (Earth's Special Forces)
